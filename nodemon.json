@@ -1,0 +1,7 @@
+{
+    "env": {
+        "MONGO_URL_DEV": "mongodb://localhost:27017/node-rest-shop",
+        "MONGO_URL_PROD": "",
+        "JWT_KEY": "my-32-character-ultra-secure-and-ultra-long-secret-key"
+    }
+}
