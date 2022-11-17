@@ -1,17 +1,17 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const checkAuth = require('../middleware/check-auth');
+const checkAuth = require("../middleware/check-auth");
 
-const OrdersController = require('../controllers/orders');
+const OrdersController = require("../controllers/orders");
 
-router.get('/', checkAuth, OrdersController.getAllOrders);
+router.get("/", checkAuth, OrdersController.getAllOrders);
 
-router.post('/', checkAuth, OrdersController.createOneOrder);
+router.post("/", checkAuth, OrdersController.createOneOrder);
 
-router.get('/:orderId', checkAuth, OrdersController.getOrder);
+router.get("/:orderId", checkAuth, OrdersController.getOrder);
 
-router.patch('/:orderId', checkAuth, OrdersController.updateOrder);
+router.patch("/:orderId", checkAuth, OrdersController.updateOrder);
 
-router.delete('/:orderId', checkAuth, OrdersController.deleteOrder);
+router.delete("/:orderId", checkAuth, OrdersController.deleteOrder);
 
 module.exports = router;
